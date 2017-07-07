@@ -1,6 +1,26 @@
 {
   "private": true,
   "dependencies": {
-    "express": "^4.15.3"
-  }
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  },
+  "name": "todo-mvc-api",
+  "description": "The Iron Yard Daily Project: TodoMVC API",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickmurdock/todo-mvc-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rickmurdock/todo-mvc-api/issues"
+  },
+  "homepage": "https://github.com/rickmurdock/todo-mvc-api#readme"
 }
