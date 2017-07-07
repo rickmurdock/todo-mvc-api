@@ -5,10 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 mongoose.Promise = require("bluebird");
 const Car = require("./models/Car");
-const indexRouter = require('./routes/indexRoutes');
-const addCarRouter = require('./routes/addCarRoutes');
-const deleteCarRouter = require('./routes/deleteCarRoutes');
-const updateCarRouter = require('./routes/updateCarRoutes');
+const carRouter = require('./routes/carRoutes');
 const app = express();
 const dbURL = "mongodb://localhost:27017/classiCars";
 
@@ -31,11 +28,7 @@ mongoose.connect(dbURL).then(function(err, db) {
 });
 
 // put routes here
-app.use('/', indexRouter);
-app.use('/addCar', addCarRouter);
-app.use('/updateCar', updateCarRouter);
-app.use('/deleteCar', deleteCarRouter);
-
+app.use('/car', carRouter);
 
 app.listen(3000, function () {
     console.log('Express running on http://localhost:3000/.')
